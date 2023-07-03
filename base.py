@@ -1,6 +1,8 @@
 print("""Welcome To Ferlet Bank
 =======================
-Please Sign in to your Acount !""")
+Please Sign in to your Acount !
+********************************
+""")
 
 
 class User:
@@ -12,12 +14,12 @@ class User:
     def DepositAmount(self):
         amount = int(input("Please specify the amount to deposit >> "))
         self.wallet += amount
-        print(f"your new ballance is {self.wallet}")
+        print(f" =>  your new ballance is {self.wallet}")
 
     def WithdrawAmount(self):
         amount = int(input("Please specify the amount to Withdraw >> "))
         self.wallet -= amount
-        print(f"your new ballance is {self.wallet}")
+        print(f" =>  your new ballance is {self.wallet}")
 
 
 user001 = User("user1", 1234, 500)
@@ -53,7 +55,8 @@ while True:
 
 print("Found !!!")
 while True:
-    print("Please Select one Option from bellow:")
+    print("""=================================
+Please Select one Option from bellow:""")
     print("""1 to See Wallet
 2 to Deposit Money
 3 to Withdraw Money
@@ -65,8 +68,9 @@ while True:
     elif selected_item == 2:
         current_user.DepositAmount()
     elif selected_item == 1:
-        print('your Ballance is ' + str(current_user.wallet))
+        print(' =>  your Ballance is ' + str(current_user.wallet))
     elif selected_item == 3:
         current_user.WithdrawAmount()
     else:
         print('Make sure you enter item number from the menue')
+    input('Press Enter to Continue !')
